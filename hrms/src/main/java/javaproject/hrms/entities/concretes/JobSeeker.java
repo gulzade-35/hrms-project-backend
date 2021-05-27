@@ -6,12 +6,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import javaproject.hrms.entities.abstracts.User;
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name="job_seekers")
-public class JobSeeker {
+public class JobSeeker extends User {
 
 	@Column(name="first_name")
 	private String firstName;

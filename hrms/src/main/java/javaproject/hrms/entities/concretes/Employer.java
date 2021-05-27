@@ -4,14 +4,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import javaproject.hrms.entities.abstracts.User;
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name="employers")
-public class Employer {
+public class Employer extends User {
 
-	public Employer() {}
+	
 	
 	@Column(name="company_name")
 	private String companyName;
