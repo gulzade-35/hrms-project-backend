@@ -11,22 +11,21 @@ import javaproject.hrms.business.abstracts.EmployerService;
 import javaproject.hrms.entities.concretes.Employer;
 
 @RestController
-@RequestMapping("/api/employers")
-public class EmployersController {
+
+@RequestMapping("api/employers")
+
+public class EmployerController {
 
 	private EmployerService employerService;
-	
+
 	@Autowired
-	public EmployersController(EmployerService employerService) {
+	public EmployerController(EmployerService employerService) {
 		super();
 		this.employerService = employerService;
 	}
-
+	
 	@GetMapping("/getall")
 	public List<Employer> getAll(){
-		
-		return this.employerService.getAll();
-		
+		return this.employerService.getAll().getData();
 	}
-	
 }

@@ -1,5 +1,7 @@
 package javaproject.hrms.entities.concretes;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -13,22 +15,22 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="employers")
+@Table(name="candidates")
 @EqualsAndHashCode(callSuper=false)
-public class Employer extends User {
+public class Candidate extends User {
+
+	@Column(name="first_name")
+	private String firstName;
 	
-	@Column(name="web_site")
-	private String webSite;
+	@Column(name="last_name")
+	private String lastName;
 	
-	@Column(name="phone_number")
-	private String phoneNumber;
+	@Column(name="nationality_id")
+	private String nationalityId;
 	
-	@Column(name="company_name")
-	private String companyName;
+	@Column(name="date_of_birth")
+	private LocalDate dateOfBirth;
 	
-	@Column(name="is_email_verified")
+	@Column(name="is_verified_by_email")
 	private Boolean isEmailVerified;
-	
-	@Column(name="is_verified_by_employee")
-	private Boolean isVerifiedByEmployee;
 }

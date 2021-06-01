@@ -6,4 +6,5 @@ import javaproject.hrms.entities.concretes.Employer;
 
 public interface EmployerDao extends JpaRepository<Employer, Integer> {
 
+	Employer findByEmail(String email);
 }
